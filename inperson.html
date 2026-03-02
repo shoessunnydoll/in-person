@@ -42,7 +42,7 @@
             document.getElementById('interview-page').classList.remove('hidden');
             const videoContainer = document.getElementById('video-container');
             
-            // 這裡是你的影片檔名 1video.mp4
+            // 這裡強制指定 1video.mp4
             videoContainer.innerHTML = `
                 <video id="interviewVideo" controls autoplay playsinline preload="auto">
                     <source src="1video.mp4" type="video/mp4">
@@ -51,7 +51,6 @@
             `;
         }
         function goToSurvey() {
-            // 這是你的第二階段問卷連結
             window.location.href = "https://forms.gle/9tcDcCxo2BNmK5mZ9";
         }
     </script>
