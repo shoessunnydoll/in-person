@@ -24,7 +24,7 @@
         <h2>【 第二階段：閱讀面試通知 】</h2>
         <p>請仔細閱讀以下通知內容，隨後將進入面試情境。</p>
         <div class="image-box">
-            <img src="3pic.jpg" alt="實體面試通知書">
+            <img src="1pic.jpg" alt="實體面試通知書">
         </div>
         <button style="background: #ffc107; color: #000;" onclick="showVideo()">我已閱讀完畢，進入面試</button>
     </div>
@@ -41,15 +41,17 @@
             document.getElementById('notice-page').classList.add('hidden');
             document.getElementById('interview-page').classList.remove('hidden');
             const videoContainer = document.getElementById('video-container');
+            
+            // 加入 preload 提升加載速度
+            // 注意：若希望 100% 自動播放，可能需要加上 muted，但面試影片通常需要聲音
             videoContainer.innerHTML = `
-                <video id="interviewVideo" controls autoplay playsinline>
+                <video id="interviewVideo" controls autoplay playsinline preload="auto">
                     <source src="1video.mp4" type="video/mp4">
                     您的瀏覽器不支援播放，請更換瀏覽器。
                 </video>
             `;
         }
         function goToSurvey() {
-            // 此處請更換為您的第二階段問卷連結
             window.location.href = "https://forms.gle/9tcDcCxo2BNmK5mZ9";
         }
     </script>
